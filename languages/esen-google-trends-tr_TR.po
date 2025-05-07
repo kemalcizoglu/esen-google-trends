@@ -1,0 +1,200 @@
+# Copyright (C) 2023 Kemal CIZOĞLU
+# This file is distributed under the same license as the Esen Google Trends plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Esen Google Trends 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/esen-google-trends\n"
+"POT-Creation-Date: 2023-11-10 10:00:00+00:00\n"
+"PO-Revision-Date: 2025-05-07 15:21+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: esen-google-trends\n"
+"X-Poedit-KeywordsList: __;_e;_esc_html_e;esc_html__\n"
+
+#: includes/admin/class-admin.php:57 includes/admin/class-admin.php:67
+#: includes/admin/class-metabox.php:56
+msgid "Google Trends"
+msgstr "Google Trends"
+
+#: includes/admin/class-admin.php:67
+msgid "Trends"
+msgstr "Trendler"
+
+#: includes/admin/class-admin.php:77
+msgid "Google Trends Settings"
+msgstr "Google Trends Ayarları"
+
+#: includes/admin/class-admin.php:78
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: includes/admin/class-admin.php:143
+#: includes/admin/class-dashboard-widget.php:64
+msgid "Refreshing..."
+msgstr "Yenileniyor..."
+
+#: includes/admin/class-admin.php:144
+#: includes/admin/class-dashboard-widget.php:65
+msgid "Refresh"
+msgstr "Yenile"
+
+#: includes/admin/class-admin.php:145
+#: includes/admin/class-dashboard-widget.php:66
+#: includes/admin/class-metabox.php:129
+msgid "An error occurred"
+msgstr "Bir hata oluştu"
+
+#: includes/admin/class-admin.php:161 includes/admin/class-metabox.php:185
+msgid "Security validation failed"
+msgstr "Güvenlik doğrulaması başarısız"
+
+#: includes/admin/class-admin.php:166
+msgid "You do not have permission"
+msgstr "Yetkiniz yok"
+
+#: includes/admin/class-admin.php:192
+msgid "Trends successfully updated"
+msgstr "Trendler başarıyla güncellendi"
+
+#: includes/admin/class-dashboard-widget.php:67
+#: includes/admin/class-metabox.php:128
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: includes/admin/class-dashboard-widget.php:128
+msgid "View All Trends"
+msgstr "Tüm Trendleri Görüntüle"
+
+#: includes/admin/class-dashboard-widget.php:171
+msgid "Country:"
+msgstr "Ülke:"
+
+#: includes/admin/class-dashboard-widget.php:179
+msgid "Number of trends to display:"
+msgstr "Gösterilecek trend sayısı:"
+
+#: includes/admin/class-metabox.php:86
+msgid "Get Trends"
+msgstr "Trendleri Getir"
+
+#: includes/admin/class-metabox.php:91
+msgid "Loading trends..."
+msgstr "Trendler yükleniyor..."
+
+#: includes/admin/class-metabox.php:130 includes/admin/class-metabox.php:195
+#: templates/admin-page.php:39
+msgid "No trends found"
+msgstr "Trend bulunamadı"
+
+#: includes/helper-functions.php:24
+msgid "RSS content is empty"
+msgstr "RSS içeriği boş"
+
+#: includes/helper-functions.php:33
+msgid "XML parsing error"
+msgstr "XML ayrıştırma hatası"
+
+#: includes/helper-functions.php:167
+msgid "Turkey"
+msgstr "Türkiye"
+
+#: includes/helper-functions.php:168
+msgid "United States"
+msgstr "Amerika Birleşik Devletleri"
+
+#: includes/helper-functions.php:169
+msgid "Germany"
+msgstr "Almanya"
+
+#: includes/helper-functions.php:170
+msgid "France"
+msgstr "Fransa"
+
+#: includes/helper-functions.php:171
+msgid "United Kingdom"
+msgstr "Birleşik Krallık"
+
+#: includes/helper-functions.php:172
+msgid "Japan"
+msgstr "Japonya"
+
+#: includes/helper-functions.php:173
+msgid "India"
+msgstr "Hindistan"
+
+#: includes/helper-functions.php:174
+msgid "Brazil"
+msgstr "Brezilya"
+
+#: includes/helper-functions.php:175
+msgid "Canada"
+msgstr "Kanada"
+
+#: includes/helper-functions.php:176
+msgid "Australia"
+msgstr "Avustralya"
+
+#: includes/helper-functions.php:264
+msgid "Related News"
+msgstr "İlgili Haberler"
+
+#: templates/admin-page.php:21
+msgid "Filter"
+msgstr "Filtrele"
+
+#: templates/admin-page.php:27
+msgid "Refresh Trends"
+msgstr "Trendleri Yenile"
+
+#: templates/admin-page.php:58
+msgid "Google Trends data is shown for %s."
+msgstr "Google Trends verileri %s için gösteriliyor."
+
+#: templates/admin-page.php:62
+msgid "Data is cached for one hour."
+msgstr "Veriler bir saat süreyle önbelleklenir."
+
+#: templates/admin-page.php:67
+msgid "Visit Google Trends"
+msgstr "Google Trends'i Ziyaret Et"
+
+#: templates/settings-page.php:24
+msgid "Default Country"
+msgstr "Varsayılan Ülke"
+
+#: templates/settings-page.php:39
+msgid "Select the default country for Google Trends data."
+msgstr "Google Trends verileri için varsayılan ülkeyi seçin."
+
+#: templates/settings-page.php:44
+msgid "Dashboard Widget"
+msgstr "Dashboard Widget"
+
+#: templates/settings-page.php:47
+msgid "Show Google Trends in Dashboard"
+msgstr "Google Trends'i Dashboard'da Göster"
+
+#: templates/settings-page.php:49
+msgid "Enable or disable the Google Trends widget on the WordPress dashboard."
+msgstr "WordPress dashboard'ında Google Trends widget'ını etkinleştirin veya devre dışı bırakın."
+
+#: templates/settings-page.php:54
+msgid "Post Editor"
+msgstr "Yazı Editörü"
+
+#: templates/settings-page.php:57
+msgid "Show Google Trends in Post Editor"
+msgstr "Google Trends'i Yazı Editöründe Göster"
+
+#: templates/settings-page.php:59
+msgid "Enable or disable the Google Trends metabox in the post editor."
+msgstr "Yazı editöründe Google Trends metabox'ını etkinleştirin veya devre dışı bırakın."
+
+#: templates/settings-page.php:64
+msgid "Save Settings"
+msgstr "Ayarları Kaydet"

@@ -1,0 +1,422 @@
+/**
+ * Esen Google Trends - Metabox CSS
+ */
+
+/* Metabox */
+.esen-gt-metabox {
+    margin: -6px -12px -12px -12px;
+}
+
+.esen-gt-metabox-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    background: #fcfcfc;
+}
+
+#esen-gt-metabox-geo {
+    flex: 1;
+    margin-right: 5px;
+    max-width: 120px;
+}
+
+.esen-gt-refresh-button {
+    flex: 1;
+}
+
+.esen-gt-metabox-content {
+    padding: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Trendler Listesi */
+.esen-gt-metabox-trends-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.esen-gt-metabox-trend-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.esen-gt-metabox-trend-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.esen-gt-metabox-trend-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.esen-gt-metabox-trend-title a {
+    text-decoration: none;
+    color: #0073aa;
+    font-weight: 600;
+}
+
+.esen-gt-metabox-trend-title a:hover {
+    color: #00a0d2;
+    text-decoration: underline;
+}
+
+/* Arama Hacmi */
+.esen-gt-search-volume {
+    display: inline-block;
+    padding: 1px 4px;
+    font-size: 10px;
+    color: #fff;
+    background: #2271b1;
+    border-radius: 2px;
+    margin-left: 3px;
+    font-weight: normal;
+}
+
+.esen-gt-metabox-trend-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.esen-gt-metabox-trend-actions .button {
+    font-size: 11px;
+    padding: 0 5px;
+    height: 24px;
+    line-height: 22px;
+}
+
+/* İlgili Haberler */
+.esen-gt-related-news {
+    margin-top: 8px;
+    border-top: 1px dotted #eee;
+    padding-top: 8px;
+    margin-bottom: 8px;
+}
+
+.esen-gt-related-news h4 {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.esen-gt-news-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.esen-gt-news-item {
+    display: flex;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #f0f0f1;
+}
+
+.esen-gt-news-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.esen-gt-news-image {
+    flex: 0 0 25px;
+    height: 25px;
+    margin-right: 6px;
+    overflow: hidden;
+    border-radius: 2px;
+    background: #f9f9f9;
+}
+
+.esen-gt-news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esen-gt-news-content {
+    flex: 1;
+}
+
+.esen-gt-news-title {
+    margin: 0 0 2px 0;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.esen-gt-news-title a {
+    text-decoration: none;
+    color: #2271b1;
+}
+
+.esen-gt-news-title a:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+.esen-gt-news-source {
+    display: inline-block;
+    font-size: 10px;
+    color: #646970;
+}
+
+/* İlişkili Trend */
+.esen-gt-metabox-selected {
+    padding: 8px 12px;
+    border-top: 1px solid #eee;
+    background: #fcfcfc;
+    font-size: 12px;
+}
+
+.esen-gt-metabox-selected strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.esen-gt-metabox-selected span {
+    color: #2271b1;
+}
+
+/* Durum Mesajları */
+.esen-gt-metabox-loading {
+    padding: 10px;
+    text-align: center;
+    color: #646970;
+    font-style: italic;
+}
+
+.esen-gt-no-trends {
+    padding: 10px;
+    text-align: center;
+    color: #646970;
+}
+
+/* Editöre Eklenen Trend */
+.esen-gt-trend-embed {
+    display: flex;
+    margin: 15px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.esen-gt-trend-embed .esen-gt-trend-image {
+    flex: 0 0 100px;
+    margin-right: 15px;
+}
+
+.esen-gt-trend-embed .esen-gt-trend-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.esen-gt-trend-embed .esen-gt-trend-content {
+    flex: 1;
+}
+
+.esen-gt-trend-embed .esen-gt-trend-title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.esen-gt-trend-embed .esen-gt-news-list {
+    margin-top: 10px;
+}
+
+.esen-gt-trend-embed .esen-gt-news-item {
+    padding: 5px 0;
+}
+
+.esen-gt-trend-embed .esen-gt-news-title {
+    font-size: 13px;
+}
+
+.esen-gt-trend-embed .esen-gt-trend-source {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Metabox için Trend Kartı stili */
+.esen-gt-trend-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.esen-gt-trend-card-image {
+    flex: 0 0 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.esen-gt-trend-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esen-gt-trend-card-content {
+    flex: 1;
+    padding: 15px;
+}
+
+.esen-gt-trend-card-title {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.esen-gt-trend-card-title a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.esen-gt-trend-card-title a:hover {
+    color: #00a0d2;
+    text-decoration: underline;
+}
+
+.esen-gt-trend-search-volume {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.esen-gt-trend-search-volume-label {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.esen-gt-trend-search-volume-value {
+    background-color: #f0f6fc;
+    border-radius: 3px;
+    padding: 2px 6px;
+    color: #0073aa;
+    font-weight: 600;
+}
+
+.esen-gt-trend-card-date {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* İlgili haberler stili */
+.esen-gt-trend-news-items {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.esen-gt-trend-news-title {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.esen-gt-news-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.esen-gt-news-item {
+    margin-bottom: 10px;
+}
+
+.esen-gt-news-item:last-child {
+    margin-bottom: 0;
+}
+
+.esen-gt-news-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.esen-gt-news-link:hover {
+    background-color: #f9f9f9;
+}
+
+.esen-gt-news-image {
+    flex: 0 0 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.esen-gt-news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esen-gt-news-content {
+    flex: 1;
+    padding: 8px;
+}
+
+.esen-gt-news-item-title {
+    margin: 0 0 5px;
+    font-size: 13px;
+    color: #0073aa;
+}
+
+.esen-gt-news-source {
+    display: block;
+    font-size: 11px;
+    color: #666;
+}
+
+/* Metabox özellikleri */
+#esen-google-trends-metabox .inside {
+    padding: 0;
+    margin: 0;
+}
+
+.esen-gt-metabox-content {
+    padding: 12px;
+}
+
+.esen-gt-metabox-trends {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+.esen-gt-trend-select {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.esen-gt-trend-select:hover {
+    background-color: #f7f7f7;
+}
+
+.esen-gt-trend-select.selected {
+    background-color: #e7f3f9;
+    border-color: #0073aa;
+}
+
+.esen-gt-insert-button {
+    margin-top: 10px;
+    text-align: right;
+} 

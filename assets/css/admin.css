@@ -1,0 +1,242 @@
+/**
+ * Esen Google Trends - Admin CSS
+ */
+
+/* Genel Stiller */
+.esen-gt-admin-page {
+    margin: 20px 0;
+}
+
+/* Başlık Alanı */
+.esen-gt-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.esen-gt-admin-header-filters form {
+    display: flex;
+    align-items: center;
+}
+
+.esen-gt-admin-header-filters select {
+    margin-right: 10px;
+}
+
+/* İçerik Alanı */
+.esen-gt-admin-content {
+    margin-bottom: 20px;
+}
+
+.esen-gt-trends-container {
+    margin-bottom: 20px;
+}
+
+.esen-gt-trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Trend Kartları */
+.esen-gt-trend-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.esen-gt-trend-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.esen-gt-trend-card > .esen-gt-trend-image {
+    flex: 0 0 auto;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.esen-gt-trend-card > .esen-gt-trend-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esen-gt-trend-content {
+    flex: 1;
+    padding: 15px;
+}
+
+.esen-gt-trend-title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.esen-gt-trend-title a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.esen-gt-trend-title a:hover {
+    color: #00a0d2;
+    text-decoration: underline;
+}
+
+.esen-gt-search-volume {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: #fff;
+    background: #0073aa;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.esen-gt-trend-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* İlgili Haberler */
+.esen-gt-related-news {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.esen-gt-related-news h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.esen-gt-news-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.esen-gt-news-item {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.esen-gt-news-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.esen-gt-news-image {
+    flex: 0 0 50px;
+    height: 50px;
+    margin-right: 10px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #f9f9f9;
+}
+
+.esen-gt-news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esen-gt-news-content {
+    flex: 1;
+}
+
+.esen-gt-news-title {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.esen-gt-news-title a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.esen-gt-news-title a:hover {
+    color: #00a0d2;
+    text-decoration: underline;
+}
+
+.esen-gt-news-source {
+    display: inline-block;
+    font-size: 11px;
+    color: #666;
+}
+
+/* Alt Bilgi Alanı */
+.esen-gt-admin-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ccd0d4;
+}
+
+.esen-gt-admin-footer-info {
+    color: #666;
+    font-size: 13px;
+}
+
+/* Mesajlar */
+.esen-gt-error {
+    padding: 10px;
+    color: #dc3232;
+    background: #fff;
+    border-left: 4px solid #dc3232;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Yükleme Animasyonu */
+.esen-gt-loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.esen-gt-loading:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #0073aa;
+    border-color: #0073aa transparent #0073aa transparent;
+    animation: esen-gt-loading 1.2s linear infinite;
+}
+
+@keyframes esen-gt-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
