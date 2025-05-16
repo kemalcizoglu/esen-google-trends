@@ -1,6 +1,6 @@
-# Esen Google Trends
+# Esen Trends Dashboard
 
-Esen Google Trends is a WordPress plugin that displays Google Trends RSS data for WordPress users. With this plugin, you can get information about popular searches on Google and use them in your content.
+Esen Trends Dashboard is a WordPress plugin that displays Google Trends RSS data for WordPress users. With this plugin, you can get information about popular searches on Google and use them in your content.
 
 ## Features
 
@@ -13,7 +13,7 @@ Esen Google Trends is a WordPress plugin that displays Google Trends RSS data fo
 
 ## Installation
 
-1. Upload the plugin files to the `/wp-content/plugins/esen-google-trends` directory.
+1. Upload the plugin files to the `/wp-content/plugins/esen-trends-dashboard` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Use the "Google Trends" option in the left menu to access the admin page.
 

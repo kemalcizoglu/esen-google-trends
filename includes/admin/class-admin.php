@@ -55,10 +55,10 @@ class Esen_GT_Admin {
     public function add_admin_menu() {
         // Ana menü
         add_menu_page(
-            __('Google Trends', 'esen-google-trends'),
-            __('Google Trends', 'esen-google-trends'),
+            __('Esen Trends Dashboard', 'esen-trends-dashboard'),
+            __('Esen Trends Dashboard', 'esen-trends-dashboard'),
             'edit_posts',
-            'esen-google-trends',
+            'esen-trends-dashboard',
             array($this, 'render_admin_page'),
             'dashicons-chart-line',
             30
@@ -66,21 +66,21 @@ class Esen_GT_Admin {
         
         // Alt menü - Ana sayfa (Ana menüyle aynı sayfa)
         add_submenu_page(
-            'esen-google-trends',
-            __('Google Trends', 'esen-google-trends'),
-            __('Trends', 'esen-google-trends'),
+            'esen-trends-dashboard',
+            __('Google Trends', 'esen-trends-dashboard'),
+            __('Trends', 'esen-trends-dashboard'),
             'edit_posts',
-            'esen-google-trends',
+            'esen-trends-dashboard',
             array($this, 'render_admin_page')
         );
         
         // Alt menü - Ayarlar sayfası
         add_submenu_page(
-            'esen-google-trends',
-            __('Google Trends Settings', 'esen-google-trends'),
-            __('Settings', 'esen-google-trends'),
+            'esen-trends-dashboard',
+            __('Google Trends Settings', 'esen-trends-dashboard'),
+            __('Settings', 'esen-trends-dashboard'),
             'manage_options', // Sadece yöneticiler ayarları değiştirebilir
-            'esen-google-trends-settings',
+            'esen-trends-dashboard-settings',
             array($this, 'render_settings_page')
         );
     }
@@ -144,7 +144,7 @@ class Esen_GT_Admin {
      */
     public function enqueue_admin_assets($hook) {
         // Sadece bizim eklenti sayfalarında yükle
-        if ($hook === 'toplevel_page_esen-google-trends' || $hook === 'google-trends_page_esen-google-trends-settings') {
+        if ($hook === 'toplevel_page_esen-trends-dashboard' || $hook === 'google-trends_page_esen-trends-dashboard-settings') {
             // CSS
             wp_enqueue_style(
                 'esen-gt-admin-styles',
@@ -166,9 +166,9 @@ class Esen_GT_Admin {
             wp_localize_script('esen-gt-admin-scripts', 'esenGT', array(
                 'ajaxUrl' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('esen_gt_nonce'),
-                'refreshing' => __('Refreshing...', 'esen-google-trends'),
-                'refresh' => __('Refresh', 'esen-google-trends'),
-                'error' => __('An error occurred', 'esen-google-trends')
+                'refreshing' => __('Refreshing...', 'esen-trends-dashboard'),
+                'refresh' => __('Refresh', 'esen-trends-dashboard'),
+                'error' => __('An error occurred', 'esen-trends-dashboard')
             ));
         }
     }
@@ -179,12 +179,12 @@ class Esen_GT_Admin {
     public function ajax_refresh_trends() {
         // Nonce kontrolü
         if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'esen_gt_nonce')) {
-            wp_send_json_error(array('message' => __('Security validation failed', 'esen-google-trends')));
+            wp_send_json_error(array('message' => __('Security validation failed', 'esen-trends-dashboard')));
         }
         
         // Yetki kontrolü
         if (!current_user_can('edit_posts')) {
-            wp_send_json_error(array('message' => __('You do not have permission', 'esen-google-trends')));
+            wp_send_json_error(array('message' => __('You do not have permission', 'esen-trends-dashboard')));
         }
         
         $geo = isset($_POST['geo']) ? sanitize_text_field(wp_unslash($_POST['geo'])) : get_option('esen_gt_default_country', 'TR');
@@ -210,7 +210,7 @@ class Esen_GT_Admin {
         
         wp_send_json_success(array(
             'html' => $html,
-            'message' => __('Trends successfully updated', 'esen-google-trends')
+            'message' => __('Trends successfully updated', 'esen-trends-dashboard')
         ));
     }
 }

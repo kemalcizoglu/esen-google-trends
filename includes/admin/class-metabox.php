@@ -64,7 +64,7 @@ class Esen_GT_Metabox {
         foreach ($post_types as $post_type) {
             add_meta_box(
                 'esen_gt_trends_metabox',
-                __('Google Trends', 'esen-google-trends'),
+                __('Google Trends', 'esen-trends-dashboard'),
                 array($this, 'render_meta_box'),
                 $post_type,
                 'side',
@@ -101,13 +101,13 @@ class Esen_GT_Metabox {
                     <?php endforeach; ?>
                 </select>
                 <button type="button" class="button esen-gt-refresh-button" data-geo="<?php echo esc_attr($selected_geo); ?>">
-                    <?php esc_html_e('Get Trends', 'esen-google-trends'); ?>
+                    <?php esc_html_e('Get Trends', 'esen-trends-dashboard'); ?>
                 </button>
             </div>
             
             <div class="esen-gt-metabox-content">
                 <div id="esen-gt-metabox-trends-container" class="esen-gt-metabox-trends-container">
-                    <p class="esen-gt-metabox-loading"><?php esc_html_e('Loading trends...', 'esen-google-trends'); ?></p>
+                    <p class="esen-gt-metabox-loading"><?php esc_html_e('Loading trends...', 'esen-trends-dashboard'); ?></p>
                 </div>
             </div>
         </div>
@@ -145,9 +145,9 @@ class Esen_GT_Metabox {
         wp_localize_script('esen-gt-metabox-scripts', 'esenGT', array(
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('esen_gt_nonce'),
-            'loading' => __('Loading...', 'esen-google-trends'),
-            'error' => __('An error occurred', 'esen-google-trends'),
-            'noTrends' => __('No trends found', 'esen-google-trends')
+            'loading' => __('Loading...', 'esen-trends-dashboard'),
+            'error' => __('An error occurred', 'esen-trends-dashboard'),
+            'noTrends' => __('No trends found', 'esen-trends-dashboard')
         ));
     }
     
@@ -185,7 +185,7 @@ class Esen_GT_Metabox {
     public function ajax_get_trend_details() {
         // Nonce kontrolü
         if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'esen_gt_nonce')) {
-            wp_send_json_error(array('message' => __('Security validation failed', 'esen-google-trends')));
+            wp_send_json_error(array('message' => __('Security validation failed', 'esen-trends-dashboard')));
         }
         
         $geo = isset($_POST['geo']) ? sanitize_text_field(wp_unslash($_POST['geo'])) : get_option('esen_gt_default_country', 'TR');
@@ -200,7 +200,7 @@ class Esen_GT_Metabox {
         $html = '';
         
         if (empty($trends)) {
-            $html = '<p class="esen-gt-no-trends">' . esc_html__('No trends found', 'esen-google-trends') . '</p>';
+            $html = '<p class="esen-gt-no-trends">' . esc_html__('No trends found', 'esen-trends-dashboard') . '</p>';
         } else {
             $html .= '<ul class="esen-gt-metabox-trends-list">';
             
@@ -219,7 +219,7 @@ class Esen_GT_Metabox {
                 // İlgili haberler varsa göster
                 if (!empty($trend['news_items'])) {
                     $html .= '<div class="esen-gt-related-news">';
-                    $html .= '<h4>' . esc_html__('Related News', 'esen-google-trends') . '</h4>';
+                    $html .= '<h4>' . esc_html__('Related News', 'esen-trends-dashboard') . '</h4>';
                     $html .= '<ul class="esen-gt-news-list">';
                     
                     foreach ($trend['news_items'] as $key => $news_item) {
@@ -259,16 +259,20 @@ class Esen_GT_Metabox {
                     $html .= '</div>'; // .esen-gt-related-news
                 }
                 
-                $html .= '</li>';
+                // Trend ekle butonu
+                $html .= '<div class="esen-gt-metabox-actions">';
+                $html .= '<button type="button" class="button esen-gt-insert-trend-button" data-title="' . esc_attr($trend['title']) . '">';
+                $html .= esc_html__('Insert Title', 'esen-trends-dashboard');
+                $html .= '</button>';
+                $html .= '</div>';
+                
+                $html .= '</li>'; // .esen-gt-metabox-trend-item
             }
             
-            $html .= '</ul>';
+            $html .= '</ul>'; // .esen-gt-metabox-trends-list
         }
         
-        wp_send_json_success(array(
-            'html' => $html,
-            'trends' => $trends
-        ));
+        wp_send_json_success(array('html' => $html));
     }
 }
 

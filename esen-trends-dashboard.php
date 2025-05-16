@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Esen Google Trends
- * Plugin URI: https://github.com/kemalcizoglu/esen-google-trends
+ * Plugin Name: Esen Trends Dashboard
+ * Plugin URI: https://github.com/kemalcizoglu/esen-trends-dashboard
  * Description: Display Google Trends RSS data directly in your WordPress dashboard and post editor. Access trending topics to optimize your content strategy.
  * Version: 1.0.0
  * Requires at least: 5.0
  * Requires PHP: 7.0
  * Author: Kemal CIZOĞLU
- * Author URI: https://cizoglubilisi.com
- * Text Domain: esen-google-trends
+ * Author URI: https://profiles.wordpress.org/kemalcizoglu/
+ * Text Domain: esen-trends-dashboard
  * Domain Path: /languages
  * License: GPL v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Eklenti sınıfını tanımla
-class Esen_Google_Trends {
+class Esen_Trends_Dashboard {
     
     // Sınıf örneği
     private static $instance = null;
@@ -93,14 +93,14 @@ class Esen_Google_Trends {
     
     // Dil dosyalarını yükle
     public function load_textdomain() {
-        load_plugin_textdomain('esen-google-trends', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('esen-trends-dashboard', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 }
 
 // Eklentiyi başlat
-function esen_google_trends() {
-    return Esen_Google_Trends::get_instance();
+function esen_trends_dashboard() {
+    return Esen_Trends_Dashboard::get_instance();
 }
 
 // Eklentiyi başlat
-esen_google_trends(); 
+esen_trends_dashboard(); 

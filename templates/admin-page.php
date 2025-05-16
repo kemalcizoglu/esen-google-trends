@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     <div class="esen-gt-admin-header">
         <div class="esen-gt-admin-header-filters">
             <form method="get" action="<?php echo esc_url(admin_url('admin.php')); ?>">
-                <input type="hidden" name="page" value="esen-google-trends">
+                <input type="hidden" name="page" value="esen-trends-dashboard">
                 <?php wp_nonce_field('esen_gt_filter_nonce', '_wpnonce', false); ?>
                 
                 <select name="geo" id="esen-gt-geo-filter">
@@ -29,13 +29,13 @@ if (!defined('ABSPATH')) {
                     <?php endforeach; ?>
                 </select>
                 
-                <button type="submit" class="button"><?php esc_html_e('Filter', 'esen-google-trends'); ?></button>
+                <button type="submit" class="button"><?php esc_html_e('Filter', 'esen-trends-dashboard'); ?></button>
             </form>
         </div>
         
         <div class="esen-gt-admin-header-actions">
             <button type="button" class="button esen-gt-refresh-button" data-geo="<?php echo esc_attr($geo); ?>">
-                <?php esc_html_e('Refresh Trends', 'esen-google-trends'); ?>
+                <?php esc_html_e('Refresh Trends', 'esen-trends-dashboard'); ?>
             </button>
         </div>
     </div>
@@ -48,7 +48,7 @@ if (!defined('ABSPATH')) {
                 </div>
             <?php elseif (empty($trends)) : ?>
                 <div class="notice notice-warning">
-                    <p><?php esc_html_e('No trends found', 'esen-google-trends'); ?></p>
+                    <p><?php esc_html_e('No trends found', 'esen-trends-dashboard'); ?></p>
                 </div>
             <?php else : ?>
                 <div class="esen-gt-trends-grid">
@@ -66,17 +66,17 @@ if (!defined('ABSPATH')) {
                 <?php
                 printf(
                     /* translators: %s: Country name */
-                    esc_html__('Google Trends data is shown for %s.', 'esen-google-trends'),
+                    esc_html__('Google Trends data is shown for %s.', 'esen-trends-dashboard'),
                     '<strong>' . esc_html($country_codes[$geo]) . '</strong>'
                 );
                 ?>
-                <?php esc_html_e('Data is cached for one hour.', 'esen-google-trends'); ?>
+                <?php esc_html_e('Data is cached for one hour.', 'esen-trends-dashboard'); ?>
             </p>
         </div>
         
         <div class="esen-gt-admin-footer-links">
             <a href="https://trends.google.com/trending?geo=<?php echo esc_attr($geo); ?>&hl=tr" target="_blank" class="button" rel="noopener noreferrer">
-                <?php esc_html_e('Visit Google Trends', 'esen-google-trends'); ?>
+                <?php esc_html_e('Visit Google Trends', 'esen-trends-dashboard'); ?>
             </a>
         </div>
     </div>

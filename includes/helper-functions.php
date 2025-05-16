@@ -26,7 +26,7 @@ function esen_gt_get_trends($geo = 'TR') {
     
     $body = wp_remote_retrieve_body($response);
     if (empty($body)) {
-        return new WP_Error('empty_rss', __('RSS içeriği boş', 'esen-google-trends'));
+        return new WP_Error('empty_rss', __('RSS içeriği boş', 'esen-trends-dashboard'));
     }
     
     // SimpleXML ile RSS'i işle
@@ -36,7 +36,7 @@ function esen_gt_get_trends($geo = 'TR') {
     if ($xml === false) {
         $errors = libxml_get_errors();
         libxml_clear_errors();
-        return new WP_Error('xml_parse_error', __('XML ayrıştırma hatası', 'esen-google-trends'), $errors);
+        return new WP_Error('xml_parse_error', __('XML ayrıştırma hatası', 'esen-trends-dashboard'), $errors);
     }
     
     $trends = array();
@@ -194,16 +194,16 @@ function esen_gt_get_cached_trends($geo = 'TR') {
  */
 function esen_gt_get_country_codes() {
     return array(
-        'TR' => __('Turkey', 'esen-google-trends'),
-        'US' => __('United States', 'esen-google-trends'),
-        'DE' => __('Germany', 'esen-google-trends'),
-        'FR' => __('France', 'esen-google-trends'),
-        'GB' => __('United Kingdom', 'esen-google-trends'),
-        'JP' => __('Japan', 'esen-google-trends'),
-        'IN' => __('India', 'esen-google-trends'),
-        'BR' => __('Brazil', 'esen-google-trends'),
-        'CA' => __('Canada', 'esen-google-trends'),
-        'AU' => __('Australia', 'esen-google-trends'),
+        'TR' => __('Turkey', 'esen-trends-dashboard'),
+        'US' => __('United States', 'esen-trends-dashboard'),
+        'DE' => __('Germany', 'esen-trends-dashboard'),
+        'FR' => __('France', 'esen-trends-dashboard'),
+        'GB' => __('United Kingdom', 'esen-trends-dashboard'),
+        'JP' => __('Japan', 'esen-trends-dashboard'),
+        'IN' => __('India', 'esen-trends-dashboard'),
+        'BR' => __('Brazil', 'esen-trends-dashboard'),
+        'CA' => __('Canada', 'esen-trends-dashboard'),
+        'AU' => __('Australia', 'esen-trends-dashboard'),
     );
 }
 
@@ -215,7 +215,7 @@ function esen_gt_get_country_codes() {
  */
 function esen_gt_admin_url($args = array()) {
     $defaults = array(
-        'page' => 'esen-google-trends',
+        'page' => 'esen-trends-dashboard',
     );
     
     $args = wp_parse_args($args, $defaults);
@@ -267,7 +267,7 @@ function esen_gt_get_trend_card_html($trend) {
     // İlgili haberler varsa göster
     if (!empty($trend['news_items'])) {
         $html .= '<div class="esen-gt-related-news">';
-        $html .= '<h4>' . esc_html__('Related News', 'esen-google-trends') . '</h4>';
+        $html .= '<h4>' . esc_html__('Related News', 'esen-trends-dashboard') . '</h4>';
         $html .= '<ul class="esen-gt-news-list">';
         
         foreach ($trend['news_items'] as $news_item) {

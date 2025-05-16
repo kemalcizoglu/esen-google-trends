@@ -46,7 +46,9 @@ class Esen_GT_RSS_API {
         register_rest_route('esen-gt/v1', '/trends', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_trends'),
-            'permission_callback' => '__return_true',
+            'permission_callback' => function() {
+                return current_user_can('read');
+            },
             'args' => array(
                 'geo' => array(
                     'default' => 'TR',

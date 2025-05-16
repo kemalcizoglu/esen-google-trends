@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
         
         <table class="form-table">
             <tr valign="top">
-                <th scope="row"><?php esc_html_e('Default Country', 'esen-google-trends'); ?></th>
+                <th scope="row"><?php esc_html_e('Default Country', 'esen-trends-dashboard'); ?></th>
                 <td>
                     <select name="esen_gt_default_country">
                         <?php 
@@ -31,33 +31,33 @@ if (!defined('ABSPATH')) {
                             </option>
                         <?php endforeach; ?>
                     </select>
-                    <p class="description"><?php esc_html_e('Select the default country for Google Trends data.', 'esen-google-trends'); ?></p>
+                    <p class="description"><?php esc_html_e('Select the default country for Google Trends data.', 'esen-trends-dashboard'); ?></p>
                 </td>
             </tr>
             
             <tr valign="top">
-                <th scope="row"><?php esc_html_e('Dashboard Widget', 'esen-google-trends'); ?></th>
+                <th scope="row"><?php esc_html_e('Dashboard Widget', 'esen-trends-dashboard'); ?></th>
                 <td>
                     <label>
                         <input type="checkbox" name="esen_gt_show_in_dashboard" value="1" <?php checked(get_option('esen_gt_show_in_dashboard'), '1'); ?> />
-                        <?php esc_html_e('Show Google Trends in Dashboard', 'esen-google-trends'); ?>
+                        <?php esc_html_e('Show Google Trends in Dashboard', 'esen-trends-dashboard'); ?>
                     </label>
-                    <p class="description"><?php esc_html_e('Enable or disable the Google Trends widget on the WordPress dashboard.', 'esen-google-trends'); ?></p>
+                    <p class="description"><?php esc_html_e('Enable or disable the Google Trends widget on the WordPress dashboard.', 'esen-trends-dashboard'); ?></p>
                 </td>
             </tr>
             
             <tr valign="top">
-                <th scope="row"><?php esc_html_e('Post Editor', 'esen-google-trends'); ?></th>
+                <th scope="row"><?php esc_html_e('Post Editor', 'esen-trends-dashboard'); ?></th>
                 <td>
                     <label>
                         <input type="checkbox" name="esen_gt_show_in_posts" value="1" <?php checked(get_option('esen_gt_show_in_posts'), '1'); ?> />
-                        <?php esc_html_e('Show Google Trends in Post Editor', 'esen-google-trends'); ?>
+                        <?php esc_html_e('Show Google Trends in Post Editor', 'esen-trends-dashboard'); ?>
                     </label>
-                    <p class="description"><?php esc_html_e('Enable or disable the Google Trends metabox in the post editor.', 'esen-google-trends'); ?></p>
+                    <p class="description"><?php esc_html_e('Enable or disable the Google Trends metabox in the post editor.', 'esen-trends-dashboard'); ?></p>
                 </td>
             </tr>
         </table>
         
-        <?php submit_button(__('Save Settings', 'esen-google-trends')); ?>
+        <?php submit_button(__('Save Settings', 'esen-trends-dashboard')); ?>
     </form>
 </div> 

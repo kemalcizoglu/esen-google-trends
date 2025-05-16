@@ -52,7 +52,7 @@ class Esen_GT_Dashboard_Widget {
     public function add_dashboard_widget() {
         wp_add_dashboard_widget(
             'esen_gt_dashboard_widget',
-            __('Google Trends', 'esen-google-trends'),
+            __('Google Trends', 'esen-trends-dashboard'),
             array($this, 'render_dashboard_widget'),
             array($this, 'dashboard_widget_control')
         );
@@ -87,10 +87,10 @@ class Esen_GT_Dashboard_Widget {
         wp_localize_script('esen-gt-dashboard-scripts', 'esenGT', array(
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('esen_gt_nonce'),
-            'refreshing' => __('Yenileniyor...', 'esen-google-trends'),
-            'refresh' => __('Yenile', 'esen-google-trends'),
-            'error' => __('Bir hata oluştu', 'esen-google-trends'),
-            'loading' => __('Yükleniyor...', 'esen-google-trends')
+            'refreshing' => __('Yenileniyor...', 'esen-trends-dashboard'),
+            'refresh' => __('Yenile', 'esen-trends-dashboard'),
+            'error' => __('Bir hata oluştu', 'esen-trends-dashboard'),
+            'loading' => __('Yükleniyor...', 'esen-trends-dashboard')
         ));
     }
     
@@ -123,7 +123,7 @@ class Esen_GT_Dashboard_Widget {
         }
         echo '</select>';
         
-        echo '<button type="button" class="button esen-gt-refresh-button" data-geo="' . esc_attr($geo) . '">' . esc_html__('Refresh', 'esen-google-trends') . '</button>';
+        echo '<button type="button" class="button esen-gt-refresh-button" data-geo="' . esc_attr($geo) . '">' . esc_html__('Refresh', 'esen-trends-dashboard') . '</button>';
         
         echo '</div>'; // .esen-gt-dashboard-header
         
@@ -138,7 +138,7 @@ class Esen_GT_Dashboard_Widget {
         
         // Eklenti ana sayfasına giden buton
         echo '<div class="esen-gt-dashboard-footer">';
-        echo '<a href="' . esc_url(esen_gt_admin_url()) . '" class="button button-primary esen-gt-view-all-button" rel="noopener noreferrer">' . esc_html__('View All Trends', 'esen-google-trends') . '</a>';
+        echo '<a href="' . esc_url(esen_gt_admin_url()) . '" class="button button-primary esen-gt-view-all-button" rel="noopener noreferrer">' . esc_html__('View All Trends', 'esen-trends-dashboard') . '</a>';
         echo '</div>';
         
         echo '</div>'; // .esen-gt-dashboard-widget
@@ -175,7 +175,7 @@ class Esen_GT_Dashboard_Widget {
         ?>
         <?php wp_nonce_field('esen_gt_dashboard_widget', 'esen_gt_dashboard_nonce'); ?>
         <p>
-            <label for="esen_gt_geo"><?php esc_html_e('Country:', 'esen-google-trends'); ?></label>
+            <label for="esen_gt_geo"><?php esc_html_e('Country:', 'esen-trends-dashboard'); ?></label>
             <select id="esen_gt_geo" name="esen_gt_geo" class="widefat">
                 <?php foreach (esen_gt_get_country_codes() as $code => $name) : ?>
                     <option value="<?php echo esc_attr($code); ?>" <?php selected($geo, $code); ?>><?php echo esc_html($name); ?></option>
@@ -183,7 +183,7 @@ class Esen_GT_Dashboard_Widget {
             </select>
         </p>
         <p>
-            <label for="esen_gt_limit"><?php esc_html_e('Number of trends to display:', 'esen-google-trends'); ?></label>
+            <label for="esen_gt_limit"><?php esc_html_e('Number of trends to display:', 'esen-trends-dashboard'); ?></label>
             <input type="number" id="esen_gt_limit" name="esen_gt_limit" value="<?php echo esc_attr($limit); ?>" min="1" max="20" class="widefat" />
         </p>
         <input type="hidden" name="esen_gt_dashboard_submit" value="1" />

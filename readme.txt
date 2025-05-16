@@ -1,4 +1,4 @@
-=== Esen Google Trends ===
+=== Esen Trends Dashboard ===
 Contributors: kemalcizoglu
 Tags: google trends, trends, analytics, dashboard widget, metabox
 Requires at least: 5.0
@@ -12,9 +12,9 @@ Display Google Trends RSS data directly in your WordPress dashboard and post edi
 
 == Description ==
 
-Esen Google Trends is a powerful WordPress plugin that integrates Google Trends data directly into your WordPress dashboard. Keep track of trending topics and popular searches to optimize your content strategy.
+Esen Trends Dashboard is a powerful WordPress plugin that integrates Google Trends data directly into your WordPress dashboard. Keep track of trending topics and popular searches to optimize your content strategy.
 
-With Esen Google Trends, you can:
+With Esen Trends Dashboard, you can:
 
 * View real-time trending topics from Google Trends
 * Filter trends by different countries
@@ -27,7 +27,7 @@ This plugin is perfect for content creators, marketers, and website owners who w
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/esen-google-trends` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/esen-trends-dashboard` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Use the "Google Trends" option in the left admin menu to access the main admin page.
 4. Configure the settings from the "Settings" submenu.
@@ -65,7 +65,7 @@ The plugin uses Google Trends' public RSS feeds, which are subject to Google's t
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial version of Esen Google Trends. Install and start tracking trending topics directly in WordPress.
+Initial version of Esen Trends Dashboard. Install and start tracking trending topics directly in WordPress.
 
 == Documentation ==
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Uninstall Esen Google Trends
+ * Uninstall Esen Trends Dashboard
  *
- * @package     Esen_Google_Trends
+ * @package     Esen_Trends_Dashboard
  * @author      Kemal CIZOĞLU
  * @copyright   2023
  * @license     GPL-2.0+
